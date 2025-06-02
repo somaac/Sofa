@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2F5233 0%, #A68B5B 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.logos-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+.logo-left, .logo-right {
+    flex: 0 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.brand-logo {
+    margin-bottom: 15px;
+}
+
+.brand-logo h1 {
+    color: #2F5233;
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.team-number {
+    color: #A68B5B;
+    font-size: 48px;
+    font-weight: 900;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand-logo h2 {
+    color: #2F5233;
+    font-size: 18px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.header p {
+    color: #A68B5B;
+    font-size: 14px;
+}
+
+.input-section {
+    margin-bottom: 25px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2F5233;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 18px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: #f7fafc;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #A68B5B;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(166, 139, 91, 0.1);
+}
+
+.search-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #2F5233 0%, #A68B5B 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(47, 82, 51, 0.3);
+}
+
+.search-btn:active {
+    transform: translateY(0);
+}
+
+.result-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #A68B5B;
+    display: none;
+}
+
+.result-card.show {
+    display: block;
+    animation: fadeInUp 0.5s ease;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 12px;
+    background: #f7fafc;
+    border-radius: 10px;
+}
+
+.result-item:last-child {
+    margin-bottom: 0;
+}
+
+.result-icon {
+    font-size: 24px;
+    margin-left: 15px;
+    width: 40px;
+    text-align: center;
+}
+
+.result-text {
+    flex: 1;
+}
+
+.result-label {
+    font-size: 14px;
+    color: #A68B5B;
+    margin-bottom: 2px;
+}
+
+.result-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2F5233;
+}
+
+.error-card {
+    background: #fed7d7;
+    border: 1px solid #feb2b2;
+    color: #c53030;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+.error-card.show {
+    display: block;
+    animation: shake 0.5s ease;
+}
+
+.color-indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #e2e8f0;
+}
+
+.color-blue { background-color: #3182ce; }
+.color-green { background-color: #38a169; }
+.color-yellow { background-color: #d69e2e; }
+.color-white { background-color: #ffffff; border-color: #cbd5e0; }
+.color-red { background-color: #e53e3e; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #A68B5B;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+        padding: 20px;
+    }
+    
+    .brand-logo h1 {
+        font-size: 18px;
+    }
+    
+    .team-number {
+        font-size: 36px;
+    }
+    
+    .brand-logo h2 {
+        font-size: 16px;
+    }
+    
+    .logo {
+        height: 50px;
+        max-width: 100px;
+    }
+}
